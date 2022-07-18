@@ -53,78 +53,78 @@ const ProductAdd = () => {
         }
     }
     return (<div>
-            <Topbar />
-            <Sidebar />
-            <div>
-                <section>
-                    <div>
-                        <div>
-                            <div className="col-sm-6">
-                                <h1>Agregar productos</h1>
-                            </div>
-                            <div className="col-sm-6">
-                                <ol>
-                                    <li><a href="/">Cloud Sales</a></li>
-                                    <li><a href="/products">Productos</a></li>
-                                    <li>Agregar</li>
-                                </ol>
-                            </div>
+        <Topbar />
+        <Sidebar />
+        <div className="content-wrapper">
+            <section className="content-header">
+                <div className="container-fluid">
+                    <div className="row mb-2">
+                        <div className="col-sm-6">
+                            <h1>Incorporación de Producto</h1>
+                        </div>
+                        <div className="col-sm-6">
+                            <ol className="breadcrumb float-sm-right">
+                                <li className="breadcrumb-item"><a href="/">Cloud Sales</a></li>
+                                <li className="breadcrumb-item"><a href="/products">Productos</a></li>
+                                <li className="breadcrumb-item active">Agregar</li>
+                            </ol>
                         </div>
                     </div>
-                </section>
-                <section>
-                    <div>
-                        <div>
-                            <form onSubmit={save}>
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="form-group">
-                                        <label>Nombre</label>
-                                        <input type="text" name="productName" id="productName"/>
-                                    </div>
-                                </div>
-                                <div className="col-4">
-                                    <div className="form-group">
-                                        <label htmlFor="MSU">U. min. Venta</label>
-                                        <input type="number" name="MSU" id="MSU"/>
-                                    </div>
-                                </div>
-                                <div className="col-4">
-                                    <div className="form-group">
-                                        <label htmlFor="price">Precio</label>
-                                        <input type="number" name="price" id="price"/>
-                                    </div>
-                                </div>
-                                <div className="col-4">
-                                    <div className="form-group">
-                                        <label htmlFor="stock">Stock</label>
-                                        <input type="number" name="stock" id="stock"/>
-                                    </div>
-                                </div>
-                                <div className="col-6">
-                                    <div className="form-group">
-                                        <label htmlFor="MDPrice">Maximo Descuento Precio</label>
-                                        <input type="number" name="MDPrice" id="MDPrice"/>
-                                    </div>
-                                </div>
-                                <div className="col-6">
-                                    <div className="form-group">
-                                        <label htmlFor="MDPercentage">Maximo Descuento Porcentaje</label>
-                                        <input type="number" name="MDPercentage" id="MDPercentage" max="50" min="0"/>
-                                    </div>
+                </div>
+            </section>
+            <section className="content">
+                <div className="card">
+                    <div className="card-body">
+                        <form onSubmit={save}>
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="form-group">
+                                    <label htmlFor="productName" className="control-label">Nombre</label>
+                                    <input type="text" name="productName" id="productName" className="form-control"required />
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-between">
-                                <button type="button" onClick={cancel} className="btn btn-secondary"><i className="fas fa-times"></i> Cancelar</button>
-                                <button type="submit" className="btn btn-primary"><i className="fas fa-save"></i> Guardar</button>
+                            <div className="col-4">
+                                <div className="form-group">
+                                    <label htmlFor="MSU" className="control-label">Un. Mini. de Venta</label>
+                                    <input type="number" name="MSU" id="MSU" className="form-control" required />
+                                </div>
                             </div>
-                            </form>
+                            <div className="col-4">
+                                <div className="form-group">
+                                    <label htmlFor="price" className="control-label">Precio</label>
+                                    <input type="number" name="price" id="price" className="form-control" required />
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="form-group">
+                                    <label htmlFor="stock" className="control-label">Stock</label>
+                                    <input type="number" name="stock" id="stock" className="form-control" required />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div className="form-group">
+                                    <label htmlFor="MDPrice" className="control-label">Maximo Descuento Precio</label>
+                                    <input type="number" name="MDPrice" id="MDPrice" className="form-control" required />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div className="form-group">
+                                    <label htmlFor="MDPercentage" className="control-label">Maximo Descuento Porcentaje</label>
+                                    <input type="number" name="MDPercentage" id="MDPercentage" className="form-control" max="50" min="0" required />
+                                </div>
+                            </div>
                         </div>
+                        <div className="d-flex justify-content-between">
+                            <button type="button" onClick={cancel} className="btn btn-secondary"><i className="fas fa-times"></i> Cancelar</button>
+                            <button type="submit" className="btn btn-primary"><i className="fas fa-save"></i> Guardar</button>
+                        </div>
+                        </form>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
-    )
+    </div>
+)
 }
 
 export default ProductAdd;

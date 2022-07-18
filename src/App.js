@@ -20,17 +20,17 @@ function App(){
   return(
     <div className="App">
       <Routes>
-        <Route path="/" element ={<Login />} ></Route>
-        <Route path="/" element ={<Sales />} ></Route>
-        <Route path="/" element ={<ProductsAdmin />} ></Route>
-        <Route path="/" element ={<ProductAdd />} ></Route>
-        <Route path="/" element ={< ProductsEdit/>} ></Route>
-        <Route path="/" element ={< ClientsAdmin/>} ></Route>
-        <Route path="/" element ={< ClientsAdd/>} ></Route>
-        <Route path="/" element ={< ClientsEdit/>} ></Route>
-        <Route path="/" element ={< UsersAdmin/>} ></Route>
-        <Route path="/" element ={< UsersAdd/>} ></Route>
-        <Route path="/" element ={< UsersEdit />} ></Route>
+        <Route path="/" element={<Login/>} ></Route>
+        <Route path="/sales" element={<Sales/>} ></Route>
+        <Route path="/products" element={<ProductsAdmin/>} ></Route>
+        <Route path="/products/add" element={<ProductAdd/>} ></Route>
+        <Route path="/Products/edit" element={<ProductsEdit/>} ></Route>
+        <Route path="/Clients/Admin" element={<ClientsAdmin/>} ></Route>
+        <Route path="/Clients/Add" element={<ClientsAdd/>} ></Route>
+        <Route path="/Clients/Edit" element={<ClientsEdit/>} ></Route>
+        <Route path="/Users/Admin" element={<UsersAdmin/>} ></Route>
+        <Route path="/Users/Add" element={<UsersAdd/>} ></Route>
+        <Route path="/Users/Edit" element={<UsersEdit/>} ></Route>
       </Routes>
     </div>
   );

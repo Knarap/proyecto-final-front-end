@@ -57,7 +57,7 @@ class Sales extends React.Component{
                                     <div className="form-group">
                                         <label className="control-label">Cliente</label>
                                         <select name="client" id="client" className="form-control">
-                                            <option value="0">--Seleccione</option>
+                                            <option value="0">Seleccione</option>
                                             {clientList.map(client => (
                                                 <option key={client.id} value={client.id}>
                                                     {client.name}
@@ -79,7 +79,7 @@ class Sales extends React.Component{
                                     <div className="form-group">
                                         <label className="control-label">Producto</label>
                                         <select name="product" id="product" className="form-control">
-                                            <option value="0">--Seleccione</option>
+                                            <option value="0">Seleccione</option>
                                             {productList.map(product => (
                                                 <option key={product.id} value={product.id}>
                                                     {product.name}

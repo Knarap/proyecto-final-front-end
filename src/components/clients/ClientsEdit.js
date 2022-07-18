@@ -61,12 +61,12 @@ const ClientsEdit = () => {
                 <div>
                     <div>
                         <div className="col-sm-6">
-                            <h1>Editar clientes</h1>
+                            <h1>Editar Clientes</h1>
                         </div>
                         <div className="col-sm-6">
                             <ol>
                                 <li><a href="/">Cloud Sales</a></li>
-                                <li><a href="/products">clientes</a></li>
+                                <li><a href="/clients">clientes</a></li>
                                 <li>Agregar</li>
                             </ol>
                         </div>
@@ -80,31 +80,31 @@ const ClientsEdit = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="form-group">
-                                    <label>Nombre</label>
+                                    <label htmlFor="name">Nombre</label>
                                     <input type="text" name="ClientName" id="ClientName"/>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="MSU">Apellido</label>
+                                    <label htmlFor="apellido">Apellido</label>
                                     <input type="number" name="ClientLastName" id="ClientLastName"/>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="price">rut</label>
+                                    <label htmlFor="rut">rut</label>
                                     <input type="number" name="Rut" id="rut"/>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="stock">fono</label>
+                                    <label htmlFor="fono">fono</label>
                                     <input type="number" name="fono" id="fono"/>
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div className="form-group">
-                                    <label htmlFor="MDPrice">Direccion</label>
+                                    <label htmlFor="direccion">Direccion</label>
                                     <input type="text" name="ClientDireccion" id="ClientDireccion"/>
                                 </div>
                             </div>

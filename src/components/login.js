@@ -67,6 +67,8 @@ const Login = () => {
         }
         return response.json();
       }).then((result) => {
+
+        console.log(result.data)
         if(!result.data[0].active){
           showMessage(true, "El usuario no se encuentra activo. Acceso denegado");
           changeButtonState(button, true);
@@ -78,8 +80,8 @@ const Login = () => {
           showMessage(false, "");
           changeButtonState(button, false);
           localStorage.setItem("user", infoUser);
-          const roles = [infoData['level']];
-          //setAuth({user, password, roles})
+          /*const roles = [infoData['level']];
+          setAuth({user, password, roles})*/
           navigate("/sales");
         } catch (error) {
           console.log(error);

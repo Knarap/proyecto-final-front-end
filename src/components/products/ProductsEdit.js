@@ -56,62 +56,62 @@ const ProductsEdit = () => {
     return (<div>
         <Topbar />
         <Sidebar />
-        <div>
-            <section>
-                <div>
-                    <div>
+        <div className="content-wrapper">
+            <section className="content-header">
+                <div className="container-fluid">
+                    <div className="row mb-2">
                         <div className="col-sm-6">
-                            <h1>Editar Productos</h1>
+                            <h1>Incorporación de Producto</h1>
                         </div>
                         <div className="col-sm-6">
-                            <ol>
-                                <li><a href="/">Cloud Sales</a></li>
-                                <li><a href="/products">Productos</a></li>
-                                <li>Agregar</li>
+                            <ol className="breadcrumb float-sm-right">
+                                <li className="breadcrumb-item"><a href="/">Cloud Sales</a></li>
+                                <li className="breadcrumb-item"><a href="/products">Productos</a></li>
+                                <li className="breadcrumb-item active">Agregar</li>
                             </ol>
                         </div>
                     </div>
                 </div>
             </section>
-            <section>
-                <div>
-                    <div>
+            <section className="content">
+                <div className="card">
+                    <div className="card-body">
                         <form onSubmit={save}>
                         <div className="row">
                             <div className="col-12">
                                 <div className="form-group">
-                                    <label>Nombre</label>
-                                    <input type="text" name="productName" id="productName"/>
+                                    <label htmlFor="productName" className="control-label">Nombre</label>
+                                    <input type="text" name="productName" id="productName" className="form-control" defaultValue={productData.name} required />
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="MSU">U. min. Venta</label>
-                                    <input type="number" name="MSU" id="MSU"/>
+                                    <label htmlFor="MSU" className="control-label">Un. Mini. de Venta</label>
+                                    <input type="number" name="MSU" id="MSU" className="form-control" defaultValue={productData.MSU} required />
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="price">Precio</label>
-                                    <input type="number" name="price" id="price"/>
+                                    <label htmlFor="price" className="control-label">Precio</label>
+                                    <input type="number" name="price" id="price" className="form-control" defaultValue={productData.price} required />
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="form-group">
-                                    <label htmlFor="stock">Stock</label>
-                                    <input type="number" name="stock" id="stock"/>
+                                    <label htmlFor="stock" className="control-label">Stock</label>
+                                    <input type="number" name="stock" id="stock" className="form-control" defaultValue={productData.stock} required />
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div className="form-group">
-                                    <label htmlFor="MDPrice">Maximo Descuento Precio</label>
-                                    <input type="number" name="MDPrice" id="MDPrice"/>
+                                    <label htmlFor="MDPrice" className="control-label">Maximo Descuento Precio</label>
+                                    <input type="number" name="MDPrice" id="MDPrice" className="form-control" defaultValue={productData.MDPrice} required />
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div className="form-group">
-                                    <label htmlFor="MDPercentage">Maximo Descuento Porcentaje</label>
-                                    <input type="number" name="MDPercentage" id="MDPercentage" max="50" min="0"/>
+                                    <label htmlFor="MDPercentage" className="control-label">Maximo Descuento Porcentaje</label>
+                                    <input type="number" name="MDPercentage" id="MDPercentage" defaultValue={productData.MDPercentage} className="form-control" max="50" min="0" required />
                                 </div>
                             </div>
                         </div>
